@@ -1,11 +1,22 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+docker build -t techtrends -f Dockerfile .
+
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run -d -p 7111:3111 techtrends
+
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker ps 
+docker logs 90870952d8a8
+
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+INFO:werkzeug:12-10-2022, 12:56:36,  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:12-10-2022, 12:57:36, 172.17.0.1 - - [10/Dec/2022 12:57:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:12-10-2022, 12:57:36, 172.17.0.1 - - [10/Dec/2022 12:57:36] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:12-10-2022, 12:57:36, 172.17.0.1 - - [10/Dec/2022 12:57:36] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app:12-10-2022, 12:58:21, Article "KubeCon + CloudNativeCon 2021" retrieved!
+INFO:werkzeug:12-10-2022, 12:58:21, 172.17.0.1 - - [10/Dec/2022 12:58:21] "GET /2 HTTP/1.1" 200 -
+INFO:werkzeug:12-10-2022, 12:58:21, 172.17.0.1 - - [10/Dec/2022 12:58:21] "GET /static/css/main.css HTTP/1.1" 304 -
+
