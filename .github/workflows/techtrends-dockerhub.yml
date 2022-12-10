@@ -31,4 +31,4 @@ jobs:
           context: .
           file: ./project/techtrends/Dockerfile
           push: true
-          tags: chandralekha/techtrends:latest
+          tags: chandralekha28/techtrends:latest
