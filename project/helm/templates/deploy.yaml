@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  creationTimestamp: null
   labels:
     app: techtrends
   name: techtrends
@@ -10,8 +11,7 @@ spec:
   selector:
     matchLabels:
       app: techtrends
-  strategy:
-    type: RollingUpdate
+  strategy: {}
   template:
     metadata:
       labels:
@@ -36,5 +36,5 @@ spec:
             memory: {{ .Values.resources.requests.memory }}
             cpu: {{ .Values.resources.requests.CPU }}
           limits:
-           memory: {{ .Values.resources.limits.memory }}
+            memory: {{ .Values.resources.limits.memory }}
             cpu: {{ .Values.resources.limits.CPU }}
